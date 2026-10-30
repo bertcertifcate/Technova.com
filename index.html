@@ -1,0 +1,643 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#08111f">
+    <meta name="description" content="Explore the Technova portfolio, practical tech services, and contact information.">
+    <title>Technova — Portfolio, services &amp; contact</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="site-header">
+        <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="sidebar">
+          <span></span><span></span>
+        </button>
+        <a class="brand" href="#home" aria-label="Technova home" data-view="home">
+          <img class="brand-mark" src="technova-logo.svg" alt="TechNova logo">
+        </a>
+        <button class="account-trigger" id="account-trigger" type="button">Sign in</button>
+        <button class="orders-trigger" id="my-orders-trigger" type="button">My orders</button>
+        <button class="cart-trigger" id="cart-trigger" type="button" aria-label="Shopping cart, 0 items">
+          <span aria-hidden="true">Cart</span>
+          <span class="cart-count" id="cart-count" aria-live="polite">0</span>
+        </button>
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to light mode" aria-pressed="false" title="Switch to light mode">
+          <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"></path></svg>
+          <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 15.5A8.5 8.5 0 0 1 8.5 3.5 8.5 8.5 0 1 0 20.5 15.5Z"></path></svg>
+        </button>
+        <div class="header-note"><span class="status-dot"></span> Independent by design <span class="header-divider">/</span> Since 2026</div>
+      </header>
+
+      <nav class="sidebar" id="sidebar" aria-label="Main navigation">
+        <p class="nav-label">Explore</p>
+        <div class="nav-list">
+          <button class="nav-item is-active" type="button" data-view="home">Home</button>
+          <button class="nav-item" type="button" data-view="about" aria-expanded="false">About <span class="nav-chevron">+</span></button>
+          <div class="subnav" id="about-subnav" hidden>
+            <button type="button" data-view="history">Our history</button>
+            <button type="button" data-view="organization">Organization</button>
+            <button type="button" data-view="profile">Company profile</button>
+          </div>
+          <button class="nav-item" type="button" data-view="portfolio">Portfolio</button>
+          <button class="nav-item" type="button" data-view="services">Services</button>
+          <button class="nav-item" type="button" data-view="contacts">Contacts</button>
+          <button class="nav-item" type="button" data-view="dashboard" hidden>Owner dashboard</button>
+        </div>
+        <div class="sidebar-bottom">
+          <span class="nav-label">Based in</span>
+          <p>Mandaue City,<br>Cebu, Philippines.</p>
+          <a class="sidebar-coordinate" href="https://maps.google.com/?q=Mandaue+City%2C+Cebu" target="_blank" rel="noreferrer">VIEW AREA ↗</a>
+        </div>
+      </nav>
+
+      <main class="main-content" id="main-content" tabindex="-1">
+        <section class="content-view is-visible" data-panel="home" aria-labelledby="home-title">
+          <div class="store-status-bar" aria-label="Store information">
+            <strong>DEMO STORE</strong>
+            <span>Sample products · No real payment</span>
+          </div>
+          <div class="home-hero">
+            <div class="hero-copy">
+              <div class="hero-kicker"><span class="eyebrow-line"></span> Make room for better sound</div>
+              <h1 id="home-title">Good tech.<br><span class="text-muted">Good days.</span></h1>
+              <p class="hero-description">Explore practical electronics for work, study, and play. Find your everyday essentials, add a favorite to your cart, and check out in our demo store.</p>
+              <div class="hero-actions">
+                <button class="shop-cta" type="button" data-scroll-to="shop">Shop featured tech <span aria-hidden="true">→</span></button>
+                <button class="text-link" type="button" data-view="about">Get to know Technova <span aria-hidden="true">↗</span></button>
+              </div>
+            </div>
+            <div class="hero-product-visual">
+              <div class="hero-product-halo" aria-hidden="true"></div>
+              <img src="https://images.unsplash.com/photo-1546435770-a3e426bf472b?auto=format&amp;fit=crop&amp;w=1000&amp;q=85" alt="Over-ear headphones, featured in the DGMX audio collection">
+              <div class="hero-product-label"><span>THE AUDIO EDIT</span><strong>Find your focus.</strong></div>
+              <span class="hero-product-index" aria-hidden="true">TECHNOVA</span>
+            </div>
+    
+          </div>
+          <section class="store-benefits" aria-label="Shopping highlights">
+            <article class="benefit-item"><span class="benefit-icon" aria-hidden="true">✳</span><div><strong>Picked with purpose</strong><span>Useful gear for real routines</span></div></article>
+            <article class="benefit-item"><span class="benefit-icon" aria-hidden="true">↗</span><div><strong>Easy to explore</strong><span>Find the right everyday tech</span></div></article>
+            <article class="benefit-item"><span class="benefit-icon" aria-hidden="true">✓</span><div><strong>Cart-ready favorites</strong><span>Try the complete demo checkout</span></div></article>
+          </section>
+          <section class="shop-discovery" aria-labelledby="shop-categories-title">
+            <div class="discovery-heading">
+              <div>
+                <div class="hero-kicker"><span class="eyebrow-line"></span> Find your everyday favorite</div>
+                <h2 id="shop-categories-title">Browse by <span class="text-muted">category.</span></h2>
+              </div>
+            </div>
+            <div class="shop-category-grid" role="group" aria-label="Browse product categories">
+              <button class="shop-category-card category-audio" type="button" data-shop-category="audio">
+                <span class="shop-category-image" aria-hidden="true"></span>
+                <span class="shop-category-label"><small>AUDIO</small><strong>Sound good.</strong></span>
+                <span class="shop-category-arrow" aria-hidden="true">↗</span>
+              </button>
+              <button class="shop-category-card category-mobile" type="button" data-shop-category="mobile">
+                <span class="shop-category-image" aria-hidden="true"></span>
+                <span class="shop-category-label"><small>MOBILE</small><strong>Go further.</strong></span>
+                <span class="shop-category-arrow" aria-hidden="true">↗</span>
+              </button>
+              <button class="shop-category-card category-wearables" type="button" data-shop-category="wearables">
+                <span class="shop-category-image" aria-hidden="true"></span>
+                <span class="shop-category-label"><small>WEARABLES</small><strong>In your element.</strong></span>
+                <span class="shop-category-arrow" aria-hidden="true">↗</span>
+              </button>
+              <button class="shop-category-card category-desk" type="button" data-shop-category="accessories">
+                <span class="shop-category-image" aria-hidden="true"></span>
+                <span class="shop-category-label"><small>DESK SETUP</small><strong>Find your flow.</strong></span>
+                <span class="shop-category-arrow" aria-hidden="true">↗</span>
+              </button>
+            </div>
+          </section>
+          <section class="product-section" id="shop" aria-labelledby="products-title">
+            <div class="product-heading">
+              <div>
+                <div class="hero-kicker"><span class="eyebrow-line"></span> A few of our favorites</div>
+                <h2 id="products-title">Featured <span class="text-muted">products.</span></h2>
+              </div>
+            </div>
+            <div class="category-filters" role="group" aria-label="Filter products by category">
+              <button class="category-filter is-active" type="button" data-category-filter="all" aria-pressed="true">All products</button>
+              <button class="category-filter" type="button" data-category-filter="computing" aria-pressed="false">Computing</button>
+              <button class="category-filter" type="button" data-category-filter="mobile" aria-pressed="false">Mobile</button>
+              <button class="category-filter" type="button" data-category-filter="audio" aria-pressed="false">Audio</button>
+              <button class="category-filter" type="button" data-category-filter="wearables" aria-pressed="false">Wearables</button>
+              <button class="category-filter" type="button" data-category-filter="accessories" aria-pressed="false">Desk setup</button>
+              <button class="category-filter" type="button" data-category-filter="displays" aria-pressed="false">Displays</button>
+              <button class="category-filter" type="button" data-category-filter="cameras" aria-pressed="false">Cameras</button>
+            </div>
+            <label class="product-search">
+              <span class="sr-only">Search products</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"></circle><path d="m16 16 5 5"></path></svg>
+              <input id="product-search" type="search" placeholder="Search products, categories, or features..." autocomplete="off">
+            </label>
+            <p class="sr-only" id="product-filter-status" aria-live="polite"></p>
+            <div class="product-grid">
+              <article class="product-card">
+                <img class="product-image" src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&amp;fit=crop&amp;w=720&amp;q=80" alt="Slim laptop open on a desk" loading="lazy" decoding="async">
+                <div class="product-card-content">
+                  <span class="product-category">COMPUTING · SAMPLE MODEL</span>
+                  <h3>NovaBook 14</h3>
+                  <p class="product-description">A portable everyday laptop for school, office work, and creative projects.</p>
+                  <ul class="product-specs">
+                    <li><span>Display</span><strong>14″ FHD IPS</strong></li>
+                    <li><span>Processor</span><strong>AMD Ryzen 5 7530U</strong></li>
+                    <li><span>Memory</span><strong>16 GB RAM</strong></li>
+                    <li><span>Storage</span><strong>512 GB SSD</strong></li>
+                    <li><span>Battery</span><strong>Up to 10 hours</strong></li>
+                  </ul>
+                  <p class="product-use"><strong>Ideal for</strong> Classes, video calls, documents, and multitasking.</p>
+                  <p class="product-price"><span>Sample price</span>₱39,990</p>
+                </div>
+              </article>
+              <article class="product-card">
+                <img class="product-image" src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&amp;fit=crop&amp;w=720&amp;q=80" alt="Modern smartphone shown from the back" loading="lazy" decoding="async">
+                <div class="product-card-content">
+                  <span class="product-category">MOBILE · SAMPLE MODEL</span>
+                  <h3>Pulse X5 5G</h3>
+                  <p class="product-description">A fast, bright smartphone with room for photos, apps, and entertainment.</p>
+                  <ul class="product-specs">
+                    <li><span>Display</span><strong>6.6″ FHD+ AMOLED · 120 Hz</strong></li>
+                    <li><span>Network</span><strong>5G · Dual SIM</strong></li>
+                    <li><span>Memory</span><strong>8 GB RAM · 256 GB</strong></li>
+                    <li><span>Camera</span><strong>50 MP main · 8 MP ultra-wide</strong></li>
+                    <li><span>Battery</span><strong>5,000 mAh · 33 W charging</strong></li>
+                  </ul>
+                  <p class="product-use"><strong>Ideal for</strong> Photos, maps, streaming, and staying connected on the go.</p>
+                  <p class="product-price"><span>Sample price</span>₱17,990</p>
+                </div>
+              </article>
+              <article class="product-card">
+                <img class="product-image" src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&amp;fit=crop&amp;w=720&amp;q=80" alt="Over-ear wireless headphones" loading="lazy" decoding="async">
+                <div class="product-card-content">
+                  <span class="product-category">AUDIO · SAMPLE MODEL</span>
+                  <h3>Echo ANC Headphones</h3>
+                  <p class="product-description">Wireless over-ear headphones with active noise cancellation for focused listening.</p>
+                  <ul class="product-specs">
+                    <li><span>Connection</span><strong>Bluetooth 5.3</strong></li>
+                    <li><span>Audio</span><strong>40 mm dynamic drivers</strong></li>
+                    <li><span>Noise control</span><strong>Active noise cancellation</strong></li>
+                    <li><span>Battery</span><strong>Up to 40 hours</strong></li>
+                    <li><span>Charging</span><strong>USB-C · built-in microphone</strong></li>
+                  </ul>
+                  <p class="product-use"><strong>Ideal for</strong> Music, commutes, video calls, and quiet focus time.</p>
+                  <p class="product-price"><span>Sample price</span>₱4,290</p>
+                </div>
+              </article>
+              <article class="product-card">
+                <img class="product-image" src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&amp;fit=crop&amp;w=720&amp;q=80" alt="Minimal smartwatch with a dark display" loading="lazy" decoding="async">
+                <div class="product-card-content">
+                  <span class="product-category">WEARABLES · SAMPLE MODEL</span>
+                  <h3>Active S2 Smartwatch</h3>
+                  <p class="product-description">An everyday fitness watch for activity stats, quick updates, and more.</p>
+                  <ul class="product-specs">
+                    <li><span>Display</span><strong>1.8″ AMOLED touchscreen</strong></li>
+                    <li><span>Health</span><strong>Heart rate · SpO₂ tracking</strong></li>
+                    <li><span>Location</span><strong>Built-in GPS</strong></li>
+                    <li><span>Water rating</span><strong>5 ATM</strong></li>
+                    <li><span>Battery</span><strong>Up to 7 days</strong></li>
+                  </ul>
+                  <p class="product-use"><strong>Ideal for</strong> Workout tracking, notifications, and quick everyday checks.</p>
+                  <p class="product-price"><span>Sample price</span>₱5,490</p>
+                </div>
+              </article>
+            </div>
+          </section>
+          <section class="product-section" id="other-products" aria-labelledby="other-products-title">
+            <div class="product-heading">
+              <div>
+                <div class="hero-kicker"><span class="eyebrow-line"></span> More to discover</div>
+                <h2 id="other-products-title">Other <span class="text-muted">tech picks.</span></h2>
+              </div>
+              <p>Useful gear for a better setup</p>
+            </div>
+            <div class="product-grid">
+              <article class="product-card">
+                <img class="product-image" src="https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&amp;fit=crop&amp;w=720&amp;q=80" alt="Mechanical keyboard with colorful keycaps" loading="lazy" decoding="async">
+                <div class="product-card-content">
+                  <span class="product-category">COMPUTER ACCESSORIES · SAMPLE MODEL</span>
+                  <h3>MechKey 75 Keyboard</h3>
+                  <p class="product-description">A compact mechanical keyboard built for comfortable typing and gaming.</p>
+                  <ul class="product-specs">
+                    <li><span>Layout</span><strong>75% compact · 82 keys</strong></li>
+                    <li><span>Switches</span><strong>Linear red · hot-swappable</strong></li>
+                    <li><span>Connection</span><strong>USB-C wired</strong></li>
+                    <li><span>Lighting</span><strong>Per-key RGB backlight</strong></li>
+                    <li><span>Compatibility</span><strong>Windows · macOS</strong></li>
+                  </ul>
+                  <p class="product-use"><strong>Ideal for</strong> Desk setups, long typing sessions, and PC gaming.</p>
+                  <p class="product-price"><span>Sample price</span>₱2,990</p>
+                </div>
+              </article>
+              <article class="product-card">
+                <img class="product-image" src="https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?auto=format&amp;fit=crop&amp;w=720&amp;q=80" alt="Large desktop monitor on a workstation" loading="lazy" decoding="async">
+                <div class="product-card-content">
+                  <span class="product-category">DISPLAYS · SAMPLE MODEL</span>
+                  <h3>ViewEdge 27 Monitor</h3>
+                  <p class="product-description">A sharp, spacious screen for work, study, and smooth entertainment.</p>
+                  <ul class="product-specs">
+                    <li><span>Panel</span><strong>27″ IPS · 2560 × 1440</strong></li>
+                    <li><span>Refresh rate</span><strong>100 Hz</strong></li>
+                    <li><span>Response</span><strong>1 ms MPRT</strong></li>
+                    <li><span>Connections</span><strong>HDMI · DisplayPort</strong></li>
+                    <li><span>Stand</span><strong>Tilt-adjustable</strong></li>
+                  </ul>
+                  <p class="product-use"><strong>Ideal for</strong> Multi-window work, creative projects, and PC gaming.</p>
+                  <p class="product-price"><span>Sample price</span>₱12,990</p>
+                </div>
+              </article>
+              <article class="product-card">
+                <img class="product-image" src="https://images.unsplash.com/photo-1606220945770-b5b6c2c55bf1?auto=format&amp;fit=crop&amp;w=720&amp;q=80" alt="Compact wireless earbuds in their charging case" loading="lazy" decoding="async">
+                <div class="product-card-content">
+                  <span class="product-category">AUDIO · SAMPLE MODEL</span>
+                  <h3>AeroPods Lite Earbuds</h3>
+                  <p class="product-description">Pocket-sized wireless earbuds with a portable charging case.</p>
+                  <ul class="product-specs">
+                    <li><span>Connection</span><strong>Bluetooth 5.3</strong></li>
+                    <li><span>Driver</span><strong>10 mm dynamic</strong></li>
+                    <li><span>Playback</span><strong>Up to 6 hours · 24 with case</strong></li>
+                    <li><span>Water rating</span><strong>IPX4 splash resistant</strong></li>
+                    <li><span>Charging</span><strong>USB-C case</strong></li>
+                  </ul>
+                  <p class="product-use"><strong>Ideal for</strong> Podcasts, calls, commutes, and everyday listening.</p>
+                  <p class="product-price"><span>Sample price</span>₱2,490</p>
+                </div>
+              </article>
+              <article class="product-card">
+                <img class="product-image" src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&amp;fit=crop&amp;w=720&amp;q=80" alt="Digital mirrorless camera with a lens" loading="lazy" decoding="async">
+                <div class="product-card-content">
+                  <span class="product-category">CAMERAS · SAMPLE MODEL</span>
+                  <h3>SnapShot M24 Camera</h3>
+                  <p class="product-description">A compact mirrorless camera for learning photography and making videos.</p>
+                  <ul class="product-specs">
+                    <li><span>Sensor</span><strong>24 MP APS-C</strong></li>
+                    <li><span>Video</span><strong>4K at 30 fps</strong></li>
+                    <li><span>Lens mount</span><strong>Interchangeable lenses</strong></li>
+                    <li><span>Connectivity</span><strong>Wi-Fi · Bluetooth</strong></li>
+                    <li><span>Audio</span><strong>External microphone input</strong></li>
+                  </ul>
+                  <p class="product-use"><strong>Ideal for</strong> Travel photos, portraits, and social video content.</p>
+                  <p class="product-price"><span>Sample price</span>₱39,990</p>
+                </div>
+              </article>
+              <article class="product-card">
+                <img class="product-image" src="https://images.unsplash.com/photo-1527814050087-3793815479db?auto=format&amp;fit=crop&amp;w=720&amp;q=80" alt="Wireless mouse on a clean desk" loading="lazy" decoding="async">
+                <div class="product-card-content">
+                  <span class="product-category">COMPUTER ACCESSORIES · SAMPLE MODEL</span>
+                  <h3>Flow Wireless Mouse</h3>
+                  <p class="product-description">A comfortable, compact wireless mouse for smooth everyday navigation.</p>
+                  <ul class="product-specs">
+                    <li><span>Connection</span><strong>2.4 GHz wireless</strong></li>
+                    <li><span>Sensor</span><strong>Adjustable up to 3,200 DPI</strong></li>
+                    <li><span>Buttons</span><strong>5 quiet-click buttons</strong></li>
+                    <li><span>Power</span><strong>USB-C rechargeable</strong></li>
+                    <li><span>Compatibility</span><strong>Windows · macOS</strong></li>
+                  </ul>
+                  <p class="product-use"><strong>Ideal for</strong> Study, work, and a cleaner desk setup.</p>
+                  <p class="product-price"><span>Sample price</span>₱1,290</p>
+                </div>
+              </article>
+              <article class="product-card">
+                <img class="product-image" src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&amp;fit=crop&amp;w=720&amp;q=80" alt="Laptop on a desk for everyday work" loading="lazy" decoding="async">
+                <div class="product-card-content">
+                  <span class="product-category">COMPUTING · SAMPLE MODEL</span>
+                  <h3>CreatorBook 16</h3>
+                  <p class="product-description">A larger-screen laptop concept for creative projects and multitasking.</p>
+                  <ul class="product-specs">
+                    <li><span>Display</span><strong>16″ WUXGA IPS</strong></li><li><span>Processor</span><strong>AMD Ryzen 7 class</strong></li><li><span>Memory</span><strong>16 GB RAM</strong></li><li><span>Storage</span><strong>1 TB SSD</strong></li><li><span>Graphics</span><strong>Integrated graphics</strong></li>
+                  </ul>
+                  <p class="product-use"><strong>Ideal for</strong> Design work, school projects, and a spacious everyday setup.</p>
+                  <p class="product-price"><span>Sample price</span>₱54,990</p>
+                </div>
+              </article>
+              <article class="product-card">
+                <img class="product-image" src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&amp;fit=crop&amp;w=720&amp;q=80" alt="Portable laptop computer" loading="lazy" decoding="async">
+                <div class="product-card-content">
+                  <span class="product-category">COMPUTING · SAMPLE MODEL</span>
+                  <h3>StudyMate Chromebook</h3>
+                  <p class="product-description">A lightweight web-first notebook concept for classes and everyday browsing.</p>
+                  <ul class="product-specs">
+                    <li><span>Display</span><strong>14″ Full HD</strong></li><li><span>Processor</span><strong>Efficient 8-core class</strong></li><li><span>Memory</span><strong>8 GB RAM</strong></li><li><span>Storage</span><strong>128 GB flash</strong></li><li><span>Battery</span><strong>All-day use concept</strong></li>
+                  </ul>
+                  <p class="product-use"><strong>Ideal for</strong> Browser-based lessons, research, and notes on the go.</p>
+                  <p class="product-price"><span>Sample price</span>₱19,990</p>
+                </div>
+              </article>
+              <article class="product-card">
+                <img class="product-image" src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&amp;fit=crop&amp;w=720&amp;q=80" alt="Modern smartphone for mobile connectivity" loading="lazy" decoding="async">
+                <div class="product-card-content">
+                  <span class="product-category">MOBILE · SAMPLE MODEL</span>
+                  <h3>LiteGo 5G Phone</h3>
+                  <p class="product-description">A balanced everyday smartphone concept with a bright screen and dependable battery.</p>
+                  <ul class="product-specs">
+                    <li><span>Display</span><strong>6.5″ FHD+ · 120 Hz</strong></li><li><span>Network</span><strong>5G · Dual SIM</strong></li><li><span>Memory</span><strong>8 GB RAM · 128 GB</strong></li><li><span>Camera</span><strong>50 MP main camera</strong></li><li><span>Battery</span><strong>5,000 mAh · USB-C</strong></li>
+                  </ul>
+                  <p class="product-use"><strong>Ideal for</strong> Daily communication, maps, streaming, and photos.</p>
+                  <p class="product-price"><span>Sample price</span>₱12,990</p>
+                </div>
+              </article>
+              <article class="product-card">
+                <img class="product-image" src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&amp;fit=crop&amp;w=720&amp;q=80" alt="Smartphone with a large touchscreen" loading="lazy" decoding="async">
+                <div class="product-card-content">
+                  <span class="product-category">MOBILE · SAMPLE MODEL</span>
+                  <h3>FoldFlex Phone</h3>
+                  <p class="product-description">A foldable phone concept that opens into a roomy screen for reading and media.</p>
+                  <ul class="product-specs">
+                    <li><span>Main display</span><strong>7.6″ flexible AMOLED</strong></li><li><span>Cover display</span><strong>6.3″ touchscreen</strong></li><li><span>Network</span><strong>5G · eSIM ready</strong></li><li><span>Memory</span><strong>12 GB RAM · 256 GB</strong></li><li><span>Camera</span><strong>Triple rear camera</strong></li>
+                  </ul>
+                  <p class="product-use"><strong>Ideal for</strong> Reading, multitasking, and mobile entertainment.</p>
+                  <p class="product-price"><span>Sample price</span>₱49,990</p>
+                </div>
+              </article>
+              <article class="product-card">
+                <img class="product-image" src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&amp;fit=crop&amp;w=720&amp;q=80" alt="Over-ear wireless headphones for immersive listening" loading="lazy" decoding="async">
+                <div class="product-card-content">
+                  <span class="product-category">AUDIO · SAMPLE MODEL</span>
+                  <h3>StudioBeat Pro</h3>
+                  <p class="product-description">Comfort-focused headphones for focused listening and long study sessions.</p>
+                  <ul class="product-specs">
+                    <li><span>Connection</span><strong>Bluetooth · 3.5 mm</strong></li><li><span>Audio</span><strong>40 mm drivers</strong></li><li><span>Noise control</span><strong>Hybrid ANC concept</strong></li><li><span>Battery</span><strong>Up to 35 hours</strong></li><li><span>Microphone</span><strong>Built-in call controls</strong></li>
+                  </ul>
+                  <p class="product-use"><strong>Ideal for</strong> Music, commuting, and quiet concentration.</p>
+                  <p class="product-price"><span>Sample price</span>₱6,990</p>
+                </div>
+              </article>
+              <article class="product-card">
+                <img class="product-image" src="https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?auto=format&amp;fit=crop&amp;w=720&amp;q=80" alt="Portable wireless speaker" loading="lazy" decoding="async">
+                <div class="product-card-content">
+                  <span class="product-category">AUDIO · SAMPLE MODEL</span>
+                  <h3>Roam Mini Speaker</h3>
+                  <p class="product-description">A portable speaker concept sized for a desk, weekend trip, or shared playlist.</p>
+                  <ul class="product-specs">
+                    <li><span>Connection</span><strong>Bluetooth 5.3</strong></li><li><span>Output</span><strong>12 W stereo pairing</strong></li><li><span>Battery</span><strong>Up to 12 hours</strong></li><li><span>Charging</span><strong>USB-C</strong></li><li><span>Water rating</span><strong>IPX5 splash resistant</strong></li>
+                  </ul>
+                  <p class="product-use"><strong>Ideal for</strong> Shared music, small rooms, and travel playlists.</p>
+                  <p class="product-price"><span>Sample price</span>₱2,990</p>
+                </div>
+              </article>
+              <article class="product-card">
+                <img class="product-image" src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&amp;fit=crop&amp;w=720&amp;q=80" alt="Smartwatch for everyday notifications" loading="lazy" decoding="async">
+                <div class="product-card-content">
+                  <span class="product-category">WEARABLES · SAMPLE MODEL</span>
+                  <h3>MoveFit Band</h3>
+                  <p class="product-description">A slim activity band concept for simple movement and sleep insights.</p>
+                  <ul class="product-specs">
+                    <li><span>Display</span><strong>1.5″ AMOLED</strong></li><li><span>Tracking</span><strong>Steps · sleep · heart rate</strong></li><li><span>Sports modes</span><strong>20 activity profiles</strong></li><li><span>Water rating</span><strong>5 ATM concept</strong></li><li><span>Battery</span><strong>Up to 10 days</strong></li>
+                  </ul>
+                  <p class="product-use"><strong>Ideal for</strong> Daily activity reminders and lightweight workout tracking.</p>
+                  <p class="product-price"><span>Sample price</span>₱2,490</p>
+                </div>
+              </article>
+              <article class="product-card">
+                <img class="product-image" src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&amp;fit=crop&amp;w=720&amp;q=80" alt="Classic smartwatch with a dark strap" loading="lazy" decoding="async">
+                <div class="product-card-content">
+                  <span class="product-category">WEARABLES · SAMPLE MODEL</span>
+                  <h3>Active GPS Watch</h3>
+                  <p class="product-description">A GPS-enabled watch concept for outdoor routes, training, and notifications.</p>
+                  <ul class="product-specs">
+                    <li><span>Display</span><strong>1.4″ always-on AMOLED</strong></li><li><span>Location</span><strong>Multi-system GPS</strong></li><li><span>Health</span><strong>Heart rate · SpO₂</strong></li><li><span>Water rating</span><strong>5 ATM concept</strong></li><li><span>Battery</span><strong>Up to 9 days</strong></li>
+                  </ul>
+                  <p class="product-use"><strong>Ideal for</strong> Hikes, runs, and at-a-glance daily updates.</p>
+                  <p class="product-price"><span>Sample price</span>₱7,990</p>
+                </div>
+              </article>
+              <article class="product-card">
+                <img class="product-image" src="https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&amp;fit=crop&amp;w=720&amp;q=80" alt="Compact mechanical keyboard for a desk setup" loading="lazy" decoding="async">
+                <div class="product-card-content">
+                  <span class="product-category">COMPUTER ACCESSORIES · SAMPLE MODEL</span>
+                  <h3>QuietType Wireless Keyboard</h3>
+                  <p class="product-description">A low-profile wireless keyboard concept for an uncluttered work surface.</p>
+                  <ul class="product-specs">
+                    <li><span>Layout</span><strong>Compact 75% layout</strong></li><li><span>Connection</span><strong>Bluetooth · USB-C</strong></li><li><span>Switches</span><strong>Quiet low-profile keys</strong></li><li><span>Battery</span><strong>Rechargeable USB-C</strong></li><li><span>Compatibility</span><strong>Windows · macOS · tablet</strong></li>
+                  </ul>
+                  <p class="product-use"><strong>Ideal for</strong> Shared workspaces, writing, and tidy desk setups.</p>
+                  <p class="product-price"><span>Sample price</span>₱2,790</p>
+                </div>
+              </article>
+              <article class="product-card">
+                <img class="product-image" src="https://images.unsplash.com/photo-1527814050087-3793815479db?auto=format&amp;fit=crop&amp;w=720&amp;q=80" alt="Wireless ergonomic mouse on a desk" loading="lazy" decoding="async">
+                <div class="product-card-content">
+                  <span class="product-category">COMPUTER ACCESSORIES · SAMPLE MODEL</span>
+                  <h3>ErgoGlide Mouse</h3>
+                  <p class="product-description">An ergonomic wireless mouse concept with easy device switching.</p>
+                  <ul class="product-specs">
+                    <li><span>Connection</span><strong>Bluetooth · 2.4 GHz</strong></li><li><span>Sensor</span><strong>Adjustable DPI</strong></li><li><span>Design</span><strong>Right-hand ergonomic</strong></li><li><span>Controls</span><strong>Quiet clicks · side buttons</strong></li><li><span>Power</span><strong>USB-C rechargeable</strong></li>
+                  </ul>
+                  <p class="product-use"><strong>Ideal for</strong> Long desk sessions and multi-device workflows.</p>
+                  <p class="product-price"><span>Sample price</span>₱1,890</p>
+                </div>
+              </article>
+              <article class="product-card">
+                <img class="product-image" src="https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?auto=format&amp;fit=crop&amp;w=720&amp;q=80" alt="Desktop monitor for a home workstation" loading="lazy" decoding="async">
+                <div class="product-card-content">
+                  <span class="product-category">DISPLAYS · SAMPLE MODEL</span>
+                  <h3>ColorView 24 Monitor</h3>
+                  <p class="product-description">A compact external display concept for a home study or office desk.</p>
+                  <ul class="product-specs">
+                    <li><span>Panel</span><strong>24″ IPS · Full HD</strong></li><li><span>Refresh rate</span><strong>100 Hz concept</strong></li><li><span>Color</span><strong>Wide-view display</strong></li><li><span>Connections</span><strong>HDMI · DisplayPort</strong></li><li><span>Stand</span><strong>Tilt adjustable</strong></li>
+                  </ul>
+                  <p class="product-use"><strong>Ideal for</strong> Coursework, documents, and compact workspaces.</p>
+                  <p class="product-price"><span>Sample price</span>₱7,490</p>
+                </div>
+              </article>
+              <article class="product-card">
+                <img class="product-image" src="https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?auto=format&amp;fit=crop&amp;w=720&amp;q=80" alt="Wide monitor on a modern desktop" loading="lazy" decoding="async">
+                <div class="product-card-content">
+                  <span class="product-category">DISPLAYS · SAMPLE MODEL</span>
+                  <h3>UltraWide Creator Display</h3>
+                  <p class="product-description">A wide-screen display concept designed for side-by-side windows and timelines.</p>
+                  <ul class="product-specs">
+                    <li><span>Panel</span><strong>34″ curved ultrawide</strong></li><li><span>Resolution</span><strong>3440 × 1440 concept</strong></li><li><span>Refresh rate</span><strong>120 Hz concept</strong></li><li><span>Connections</span><strong>HDMI · DisplayPort · USB-C</strong></li><li><span>Stand</span><strong>Height adjustable</strong></li>
+                  </ul>
+                  <p class="product-use"><strong>Ideal for</strong> Editing timelines, multitasking, and immersive play.</p>
+                  <p class="product-price"><span>Sample price</span>₱24,990</p>
+                </div>
+              </article>
+              <article class="product-card">
+                <img class="product-image" src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&amp;fit=crop&amp;w=720&amp;q=80" alt="Mirrorless camera with lens for photography" loading="lazy" decoding="async">
+                <div class="product-card-content">
+                  <span class="product-category">CAMERAS · SAMPLE MODEL</span>
+                  <h3>VlogMate Compact Camera</h3>
+                  <p class="product-description">A creator camera concept with a flip screen and easy-to-carry body.</p>
+                  <ul class="product-specs">
+                    <li><span>Sensor</span><strong>20 MP 1-inch type</strong></li><li><span>Video</span><strong>4K recording concept</strong></li><li><span>Screen</span><strong>Flip-out touchscreen</strong></li><li><span>Audio</span><strong>External mic input</strong></li><li><span>Connectivity</span><strong>Wi-Fi · Bluetooth</strong></li>
+                  </ul>
+                  <p class="product-use"><strong>Ideal for</strong> Vlogs, travel clips, and everyday creator content.</p>
+                  <p class="product-price"><span>Sample price</span>₱29,990</p>
+                </div>
+              </article>
+              <article class="product-card">
+                <img class="product-image" src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&amp;fit=crop&amp;w=720&amp;q=80" alt="Digital camera for travel and photography" loading="lazy" decoding="async">
+                <div class="product-card-content">
+                  <span class="product-category">CAMERAS · SAMPLE MODEL</span>
+                  <h3>TrailShot Action Cam</h3>
+                  <p class="product-description">A compact action camera concept for hands-free outdoor footage.</p>
+                  <ul class="product-specs">
+                    <li><span>Video</span><strong>4K at 60 fps concept</strong></li><li><span>Stabilization</span><strong>Digital image stabilization</strong></li><li><span>Water rating</span><strong>Waterproof housing included</strong></li><li><span>Screen</span><strong>Front status · rear touch</strong></li><li><span>Mount</span><strong>Universal accessory mount</strong></li>
+                  </ul>
+                  <p class="product-use"><strong>Ideal for</strong> Bike rides, trips, and point-of-view clips.</p>
+                  <p class="product-price"><span>Sample price</span>₱8,990</p>
+                </div>
+              </article>
+            </div>
+            <p class="product-disclaimer">Product names, specifications, images, and prices are illustrative examples not confirmed retail listings.</p>
+          </section>
+          <p class="product-empty-state" id="product-empty-state" role="status" hidden>No products found. Try a different category or search term.</p>
+        </section>
+
+        <section class="content-view" data-panel="about" aria-labelledby="about-title" hidden>
+          <div class="hero-kicker"><span class="eyebrow-line"></span> A little about us</div>
+          <h1 class="page-title" id="about-title">Good work<br>starts with <span class="text-muted">good people.</span></h1>
+          <p class="page-intro">Technova is an independent technology company bringing creative thinking and practical engineering together. Choose a chapter to explore our story.</p>
+          <div class="chapter-grid">
+            <button class="chapter-card" type="button" data-view="history"><span class="card-index">STORY</span><span class="card-title">Our history</span><span class="card-arrow">↗</span></button>
+            <button class="chapter-card" type="button" data-view="organization"><span class="card-index">PEOPLE</span><span class="card-title">Organization</span><span class="card-arrow">↗</span></button>
+            <button class="chapter-card" type="button" data-view="profile"><span class="card-index">PURPOSE</span><span class="card-title">Company profile</span><span class="card-arrow">↗</span></button>
+          </div>
+        </section>
+
+        <section class="content-view" data-panel="history" aria-labelledby="history-title" hidden>
+          <div class="hero-kicker"><span class="eyebrow-line"></span> About / Our history</div>
+          <h1 class="page-title" id="history-title">Small beginnings.<br><span class="text-muted">Big-picture thinking.</span></h1>
+          <p class="page-intro">Technova began in 2025 with a simple belief: technology should make everyday work and life better. What started as a small, curious team has grown into a collaborative studio for digital ideas.</p>
+          <div class="timeline">
+            <div class="timeline-item"><span>2025</span><p><strong>The first spark.</strong> Technova takes shape with a focus on practical, people-centered technology.</p></div>
+            <div class="timeline-item"><span>2025</span><p><strong>Growing together.</strong> New creative and technical disciplines join the team.</p></div>
+            <div class="timeline-item"><span>Today</span><p><strong>What's next is ours to build.</strong> We partner with ambitious teams to turn complex challenges into clear digital experiences.</p></div>
+          </div>
+        </section>
+
+        <section class="content-view" data-panel="organization" aria-labelledby="organization-title" hidden>
+          <div class="hero-kicker"><span class="eyebrow-line"></span> About / Organization</div>
+          <h1 class="page-title" id="organization-title">Different minds.<br><span class="text-muted">One direction.</span></h1>
+          <p class="page-intro">We keep teams connected and decisions close to the work. Each discipline brings a different perspective, and every project is a shared effort.</p>
+          <div class="org-chart" aria-label="Organizational chart">
+            <div class="org-node org-lead"><strong>Leadership</strong><small>Vision &amp; direction</small></div>
+            <div class="org-connector" aria-hidden="true"></div>
+            <div class="org-branches">
+              <div class="org-node"><strong>Design</strong><small>Research &amp; experience</small></div>
+              <div class="org-node"><strong>Technology</strong><small>Engineering &amp; systems</small></div>
+              <div class="org-node"><strong>Operations</strong><small>Delivery &amp; partnerships</small></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="content-view" data-panel="profile" aria-labelledby="profile-title" hidden>
+          <div class="hero-kicker"><span class="eyebrow-line"></span> About / Company profile</div>
+          <h1 class="page-title" id="profile-title">Technology for<br><span class="text-muted">what matters.</span></h1>
+          <p class="page-intro">Technova is an independent digital solutions company focused on designing, developing, and supporting useful technology. We bring clarity to complex challenges and build with care at every step.</p>
+          <div class="profile-facts">
+            <div><span>FOCUS</span><strong>Digital products<br>&amp; experiences</strong></div>
+            <div><span>APPROACH</span><strong>People-first<br>technology</strong></div>
+            <div><span>PRINCIPLE</span><strong>Make useful<br>things, well</strong></div>
+          </div>
+        </section>
+
+        <section class="content-view" data-panel="portfolio" aria-labelledby="portfolio-title" hidden>
+          <h1 class="page-title" id="portfolio-title">Made to <span class="text-muted">move</span><br>things forward.</h1>
+          <p class="page-intro portfolio-intro">Explore class activities and HTML practice projects. Choose a folder to browse each project and open a live copy.</p>
+          <div class="portfolio-grid">
+            <button class="folder-card folder-lime" type="button" data-folder="activities" aria-pressed="false"><span class="folder-tab"></span><span class="folder-icon" aria-hidden="true">↗</span><strong>Activities</strong><span class="folder-meta">Open the activity album</span></button>
+            <button class="folder-card folder-peach" type="button" data-folder="exercises" aria-pressed="false"><span class="folder-tab"></span><span class="folder-icon" aria-hidden="true">↗</span><strong>Exercises</strong><span class="folder-meta">Open the exercise album</span></button>
+          </div>
+          <section class="album-view" id="album-view" hidden aria-labelledby="album-title">
+            <div class="album-heading">
+              <div><span class="album-eyebrow">Portfolio album</span><h2 id="album-title"></h2></div>
+              <button class="album-back" id="album-back" type="button">← All folders</button>
+            </div>
+            <div class="album-grid" id="album-grid"></div>
+            <div class="album-controls" id="album-controls" hidden>
+              <span class="album-status" id="album-status" aria-live="polite"></span>
+              <button type="button" class="page-button" id="album-previous" aria-label="Previous album page">← <span>Previous</span></button>
+              <button type="button" class="page-button" id="album-next" aria-label="Next album page"><span>Next</span> →</button>
+            </div>
+            <span class="sr-only" id="album-announcement" aria-live="polite"></span>
+          </section>
+        </section>
+
+        <section class="content-view" data-panel="services" aria-labelledby="services-title" hidden>
+          <div class="hero-kicker"><span class="eyebrow-line"></span> Helpful tech, made simpler</div>
+          <h1 class="page-title" id="services-title">Good gadgets.<br><span class="text-muted">Good support.</span></h1>
+          <p class="page-intro">A sample menu of practical tech services, from getting a new device ready to helping your everyday setup work better. Get in touch to ask about availability.</p>
+          <div class="service-list">
+            <article class="service-row"><div><h2>New gadget setup</h2><p>Get phones, laptops, wearables, and accessories set up, updated, and paired with your everyday devices.</p></div><span class="service-symbol">01</span></article>
+            <article class="service-row"><div><h2>PC build &amp; upgrade guidance</h2><p>Get help choosing compatible components for a study, work, or gaming build, plus practical upgrade advice.</p></div><span class="service-symbol">02</span></article>
+            <article class="service-row"><div><h2>Device troubleshooting</h2><p>Work through common performance, connection, and setup issues with a friendly, step-by-step check.</p></div><span class="service-symbol">03</span></article>
+            <article class="service-row"><div><h2>Home Wi-Fi &amp; desk setup</h2><p>Plan a cleaner desk, connect everyday gear, and improve coverage and cable organization around your workspace.</p></div><span class="service-symbol">04</span></article>
+            <article class="service-row"><div><h2>Personal tech recommendations</h2><p>Find a sensible shortlist based on your needs, preferred features, and budget—without the spec-sheet overload.</p></div><span class="service-symbol">05</span></article>
+          </div>
+          <a class="submit-button service-contact-link" href="#contacts" data-view="contacts">Ask about a service <span aria-hidden="true">↗</span></a>
+        </section>
+
+        <section class="content-view" data-panel="contacts" aria-labelledby="contacts-title" hidden>
+          <div class="hero-kicker"><span class="eyebrow-line"></span> Let's make something matter</div>
+          <h1 class="page-title" id="contacts-title">Let's talk<br><span class="text-muted">tech.</span></h1>
+          <p class="page-intro">Got a question about a gadget or one of the suggested services? Reach out using the contact details below.</p>
+          <div class="contact-details" aria-label="Contact details">
+            <a class="contact-detail" href="mailto:albertodegamo60@gmail.com"><span>Email</span><strong>albertodegamo60@gmail.com</strong><span aria-hidden="true">↗</span></a>
+            <a class="contact-detail" href="tel:+639928784678"><span>Phone</span><strong>09928784678</strong><span aria-hidden="true">↗</span></a>
+            <a class="contact-detail" href="https://maps.google.com/?q=Mandaue+City%2C+Cebu" target="_blank" rel="noreferrer"><span>Location</span><strong>Mandaue City, Cebu, Philippines</strong><span aria-hidden="true">↗</span></a>
+          </div>
+          <form class="contact-form" id="feedback-form" action="mailto:albertodegamo60@gmail.com" method="post" enctype="text/plain">
+            <label for="contact-name">Your name</label><input id="contact-name" name="name" type="text" placeholder="How should we call you?" required>
+            <label for="contact-email">Email address</label><input id="contact-email" name="email" type="email" placeholder="you@example.com" required>
+            <label for="contact-message">A note for us</label><textarea id="contact-message" name="message" rows="3" placeholder="Tell us a little about your idea..." required></textarea>
+            <button class="submit-button" type="submit">Send your note <span aria-hidden="true">↗</span></button>
+            <p class="form-feedback" id="form-feedback" role="status" aria-live="polite"></p>
+          </form>
+        </section>
+
+        <section class="content-view" data-panel="dashboard" aria-labelledby="dashboard-title" hidden>
+          <div class="hero-kicker"><span class="eyebrow-line"></span> Sales overview</div>
+          <h1 class="page-title" id="dashboard-title">Owner <span class="text-muted">dashboard.</span></h1>
+          <p class="page-intro">Review sales, orders, and product stock saved in this browser.</p>
+          <div id="owner-dashboard-content" hidden>
+            <p class="dashboard-demo-warning">Demo only: the owner password is checked in this browser and does not protect the dashboard from someone who can inspect or change the page. Orders and stock are stored locally and are not shared across devices.</p>
+            <div class="dashboard-toolbar"><span class="signed-in-note" id="owner-session-label"></span><button class="shopping-secondary" id="owner-sign-out" type="button">Lock dashboard</button></div>
+            <div class="dashboard-stats" id="dashboard-stats" aria-live="polite"></div>
+            <section class="dashboard-section" aria-labelledby="inventory-title">
+              <div class="dashboard-section-heading"><div><span class="dashboard-eyebrow">PRODUCTS</span><h2 id="inventory-title">Stock on hand</h2></div></div>
+              <div class="inventory-list" id="inventory-list"></div>
+            </section>
+            <section class="dashboard-section" aria-labelledby="sales-orders-title">
+              <div class="dashboard-section-heading"><div><span class="dashboard-eyebrow">RECENT ACTIVITY</span><h2 id="sales-orders-title">All orders</h2></div></div>
+              <div class="owner-orders" id="owner-orders"></div>
+            </section>
+          </div>
+        </section>
+      </main>
+
+      <aside class="contact-rail" id="contact-rail" aria-label="Contact links" hidden>
+        <div class="rail-top"><span class="nav-label">Get in touch</span><span class="rail-asterisk" aria-hidden="true">✳</span></div>
+        <p class="rail-intro">Here in<br>Mandaue City.</p>
+        <a class="rail-link" href="mailto:albertodegamo60@gmail.com"><span>Email albertodegamo60@gmail.com</span><span>↗</span></a>
+        <a class="rail-link" href="tel:+639928784678"><span>Call 09928784678</span><span>↗</span></a>
+        <a class="rail-link" href="https://maps.google.com/?q=Mandaue+City%2C+Cebu" target="_blank" rel="noreferrer"><span>Mandaue City, Cebu</span><span>↗</span></a>
+        <p class="rail-note">Questions, recommendations,<br>or just saying hello.</p>
+      </aside>
+
+      <dialog class="shopping-dialog" id="shopping-dialog" aria-labelledby="shopping-title">
+        <div class="shopping-dialog-header">
+          <div>
+            <span class="shopping-eyebrow">TECHNOVA STORE</span>
+            <h2 id="shopping-title">Your cart</h2>
+          </div>
+          <button class="dialog-close" id="shopping-close" type="button" aria-label="Close shopping panel">×</button>
+        </div>
+        <div class="shopping-dialog-content" id="shopping-content"></div>
+      </dialog>
+
+      <footer class="site-footer">
+        <span>© 2026 Technova</span>
+        <span class="footer-center">Curiosity, connected.</span>
+        <button type="button" class="back-top" aria-label="Back to top">Back to top ↑</button>
+      </footer>
+    </div>
+  </body>
+</html>

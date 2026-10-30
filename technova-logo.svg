@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="250" height="107" viewBox="0 0 300 128">
+  <defs>
+    <linearGradient id="techGradient" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#66E7FF"/>
+      <stop offset="55%" stop-color="#1968EE"/>
+      <stop offset="100%" stop-color="#8D83FF"/>
+    </linearGradient>
+  </defs>
+  <path d="M65 110 65 50 88 30 135 78 135 48 158 28 158 104 135 124 88 76 88 96Z" fill="url(#techGradient)"/>
+  <path d="M88 76 135 124 158 104 111 57Z" fill="#8D83FF" opacity=".85"/>
+  <path d="M65 50 88 30 88 76 65 110Z" fill="#66E7FF"/>
+  <path d="M135 48 158 28 158 104 135 124Z" fill="#1968EE"/>
+  <g font-family="-apple-system, ui-sans-serif, system-ui, 'Segoe UI', Arial, sans-serif" font-size="20" font-weight="700" text-anchor="middle" letter-spacing="1">
+    <text x="175" y="76" fill="#1968EE">TECH</text>
+    <text x="175" y="100" fill="#8D83FF">NOVA</text>
+  </g>
+</svg>
